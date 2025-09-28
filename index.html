@@ -1,0 +1,337 @@
+<!DOCTYPE html>  
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Задание 1</title>
+        <style>
+            #header {
+                background-color: #f0f0f0;
+                width: 100%;
+                padding: 10px 0;
+                margin-bottom: 20px;
+            }
+            
+            .header-content {
+                max-width: 960px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                grid-template-rows: auto auto;
+                gap: 10px;
+                align-items: center;
+                padding: 0 20px;
+            }
+            
+            #logo {
+                grid-row: 1 / 3;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+            }
+            
+            #logo img {
+                max-width: 80px;
+                height: auto;
+            }
+            
+            #site-name {
+                font-size: 28px;
+                font-weight: bold;
+                text-align: center;
+                grid-column: 2;
+            }
+            
+            #nav {
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+                grid-column: 2;
+            }
+            
+            #nav a {
+                text-decoration: none;
+                color: #333;
+                padding: 5px 10px;
+                border-radius: 3px;
+                transition: background-color 0.3s;
+            }
+            
+            #nav a:hover {
+                background-color: #ddd;
+            }
+            
+            #main-content {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            
+            #data-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            
+            #data-table th, #data-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            
+            #data-table th {
+                background-color: #f2f2f2;
+            }
+            
+            #data-table tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            
+            #data-table tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
+            
+            #footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                margin-top: 20px;
+            }
+        </style>
+    </head>    
+    <body>
+        <header id="header">
+            <div class="header-content">
+                <div id="logo">
+                    <img src="popir.jpg" alt="Логотип">
+                </div>
+                <nav id="nav">
+                    <a href="#links">Ссылки</a>
+                    <a href="#table">Таблица</a>
+                    <a href="#form">Форма</a>
+                </nav>
+                <div id="site-name">РЖД</div>
+            </div>
+        </header>
+        
+        <main id="main-content">
+            <h1>Задание 1</h1>
+            
+            <h2 id="table">Таблица с поездами</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Направление</th>
+                        <th>Номер поезда</th>
+                        <th>Время отправления</th>
+                        <th>Время прибытия</th>
+                        <th>Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Москва - Санкт-Петербург</td>
+                        <td>001А</td>
+                        <td>22:30</td>
+                        <td>06:45</td>
+                        <td>2500 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>003А</td>
+                        <td>23:50</td>
+                        <td>08:05</td>
+                        <td>2800 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Москва - Владивосток</td>
+                        <td>099Й</td>
+                        <td>13:20</td>
+                        <td>07:45 (через 6 дн.)</td>
+                        <td>15000 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Москва - Казань</td>
+                        <td>031Г</td>
+                        <td>08:15</td>
+                        <td>13:40</td>
+                        <td>1800 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Москва - Самара</td>
+                        <td>105Ж</td>
+                        <td>19:10</td>
+                        <td>09:25</td>
+                        <td>2200 руб.</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ИТОГО поездов</strong></td>
+                        <td></td>
+                        <td><strong>5 поездов</strong></td>
+                        <td><strong>24300 руб.</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h1 id="links">Список ссылок</h1>
+            <ul>
+                <li>
+                    <a href="https://www.kubsu.ru/ru">Сайт КубГУ 
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.kubsu.ru/">Сайт КубГУ(в протоколе https) </a>
+                </li>
+                <li> 
+                    <a href="https://www.rzd.ru/ru/9269"><img src="buy.jpg" width="1000" height="666"></a></li>
+                <li> 
+                    <a href="inter.html">Внутренняя старница </a> 
+                </li>
+                <li><a href="#ft">Ссылка на фрагмент </a></li>
+                <li>
+                    <a href="https://www.aeroflot.ru/sb/app/ru-ru#/search?adults=1&cabin=economy&children=0&&_k=70a8mq">Ссылка с тремя параметрами в URL </a>
+                </li>
+                <li> 
+                    <a href="index.html?id=195855">Ссылка с параметром id </a> 
+                </li>
+                <li><a href="inter.html">Oтносительная ссылка на страницу в текущем каталоге </a></li>
+                <li> 
+                    <a href="about/index.html">Oтносительная ссылка на страницу в каталоге about </a>
+                </li>
+                <li>
+                    <a href = "about/index.html">Относительная на страницу в каталоге уровнем выше текущего</a>
+                </li>
+                <li> 
+                    <a href="about/index.html">Относительная на страницу в каталоге двумя уровнями выше</a>
+                </li>
+                <li><p>Контекстная ссылка <br/>РЖД — российская <a href = "https://ru.wikipedia.org/wiki/Государственное_предприятие">государственная</a> <a href = "https://ru.wikipedia.org/wiki/Вертикальная_интеграция">вертикально интегрированная</a> 
+                    компания, владелец инфраструктуры общего пользования и крупнейший перевозчик российской сети <br/> <a href = "https://ru.wikipedia.org/wiki/Железнодорожный_транспорт_в_России">железных дорог</a>. 
+                    </p></li>
+                <li> 
+                    <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B5_%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%B5_%D0%B4%D0%BE%D1%80%D0%BE%D0%B3%D0%B8#:~:text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%CC%81%D0%B9%D1%81%D0%BA%D0%B8%D0%B5%20%D0%B6%D0%B5%D0%BB%D0%B5%CC%81%D0%B7%D0%BD%D1%8B%D0%B5%20%D0%B4%D0%BE%D1%80%D0%BE%CC%81%D0%B3%D0%B8%20(%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5,%5B6%5D.">Ссылка на выделенный фрагмент со стороннего сайта </a>
+                </li>
+                <li>
+                    <img src="139196051.png" width="750" height="500" usemap="#map" alt="фигуры">
+                        <map name="map"> 
+                        <area shape="rect" alt="прямоугольник" coords="60,170,390,340" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82">
+                        <area shape="circle" alt="круг" coords="590,255,100" href="https://ru.wikipedia.org/wiki/%D0%97%D0%B5%D0%BC%D0%BB%D1%8F">
+                        </map>
+                </li>
+                <li>
+                    <a href="">Ссылка с пустым href </a>
+                </li>
+                <li>
+                    <a>Ссылка без href </a>
+                </li>
+                <li>
+                    <a href="/s0195855.github.io/index.html" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a>
+                </li>
+                <li>
+                    <!--noindex--><a href="/s0195855.github.io/index.html" rel="nofollow">Ссылка, запрещенная для индексации поисковиками </a><!--/noindex-->
+                </li>
+                <li>
+                    Нумерованный список 
+                <ol>
+                    <li> 
+                        <a href="https://ru.wikipedia.org/wiki/Москва">Москва</a>
+                    </li>
+                    <li>
+                         <a href="https://ru.wikipedia.org/wiki/Санкт-Петербург">Санкт-Петербург</a>
+                    </li>
+                   <li>
+                        <a href="https://ru.wikipedia.org/wiki/Владивосток">Владивосток</a>
+                   </li>
+                   <li> 
+                        <a href="https://ru.wikipedia.org/wiki/Казань">Казань</a>
+                   </li>
+                   <li> 
+                       <a href="https://ru.wikipedia.org/wiki/Самара">Самара</a>
+                   </li>
+                </ol>
+              </li> 
+              <li> 
+                <a href="ftp://user:password@ftp.server.com/file.txt"> Cсылкa на файл на сервере FTP с авторизацией</a>
+              </li>
+            </ul>
+            
+            <br/><h1 id="form"> Оформление билета</h1>
+            <form action="/" method="POST">
+                <label>
+                    ФИО Покупателя:<br />
+                    <input name="LNF"
+                      value="ФИО" />
+                  </label><br/><br/>
+
+                  <div id="ft"> </div>
+                  <label>
+                    Номер телефона:<br />
+                    <input name="tellephone"
+                      type="tel"
+                      placeholder="+7" />
+                  </label><br /><br/>
+
+                  <label> 
+                    Электронная почта:<br/>
+                    <input name="email"
+                    type="email" 
+                    id="email"><br/><br/>
+                  </label>
+
+                  <label>
+                    Введите дату рождения:<br />
+                    <input name="date"
+                      value=""
+                      type="date" />
+                  </label><br />
+                  <br/>
+
+                  Выберите пол:<br />
+                  <label><input type="radio" 
+                    checked="checked"
+                    name="human" value="Female"> Женщина
+                </label>
+                
+                  <label><input type="radio" 
+                    name="human" value="Male" /> Мужчина
+                </label><br /><br />
+
+                <label>
+                    Выберите любимый язык программирования:
+                    <br />
+                    <select name="pr"
+                      multiple="multiple">
+                      <option value="1" selected="selected">Pascal</option>
+                      <option value="2" >C</option>
+                      <option value="3" >C++</option>
+                      <option value="4" >JavaScript</option>
+                      <option value="5" >PHP</option>
+                      <option value="6" >Python</option>
+                      <option value="7" >Java</option>
+                      <option value="8" >Haskel</option>
+                      <option value="9" >Clojure</option>
+                      <option value="10" >Prolog</option>
+                      <option value="11" >Scala</option>
+                    </select>
+                  </label><br /><br />
+
+                  <label>
+                    Расскажите о себе:<br />
+                    <textarea name="Biography"> </textarea>
+                  </label><br /><br />
+
+                  <label><input type="checkbox" 
+                    checked="checked"
+                    name="contract" />
+                    С контрактом ознакомлен(а)
+                </label><br /><br />
+            
+                <input type="submit" value="Сохранить" />
+            </form>
+        </main>
+        
+        <footer id="footer">
+            <p>(c) Сладкомедов Ярослав</p>
+        </footer>
+    </body>
+</html>
